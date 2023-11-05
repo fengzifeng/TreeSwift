@@ -1,0 +1,6 @@
+framework module Pods_TreeSwift {
+  umbrella header "Pods-TreeSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
