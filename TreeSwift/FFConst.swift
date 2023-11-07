@@ -22,6 +22,7 @@ let ShortSystemVersion = CGFloat(Float(UIDevice.current.systemVersion) ?? 0)
 
 let UserDefaultKey_LoginUser = "LoginUser"
 let UserDefaultKey_LoginCookies = "LoginCookies"
+let UserDefaultKey_HistorySearch = "HistorySearch"
 
 let Notification_LoginSuccess = "LoginSuccess"
 

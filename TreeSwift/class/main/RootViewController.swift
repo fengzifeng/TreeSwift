@@ -14,6 +14,12 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
     
     var currentViewController : BaseViewController?
     var navArray = [HomeController.init(), TreeViewController.init(), MeViewController.init()]
+    lazy var searchButton:  UIButton = {
+        let searchButton: UIButton = UIButton.init(frame: CGRect(x: ScreenWidth - 80, y: StateBarH, width: 80, height: 44))
+        searchButton.setImage(UIImage(named: "search_icon"), for: UIControl.State.normal)
+        searchButton.addTarget(self, action: #selector(clickSearch), for: UIControl.Event.touchUpInside)
+        return searchButton
+    }()
     
     
 
@@ -22,6 +28,7 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
         self.view.backgroundColor = UIColor.purple
         self.view.addSubview(barView)
         self.swithchTapIndex(index: 0)
+        self.navigationBar.addSubview(searchButton)
     }
     
     lazy var barView: FFBarView = {
@@ -38,6 +45,11 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
         currentViewController = navArray[index]
         self.addChild(currentViewController!)
         self.view.insertSubview(currentViewController!.view, belowSubview: navigationBar)
+        if(index == 2){
+            self.searchButton.isHidden = true
+        } else {
+            self.searchButton.isHidden = false
+        }
     }
     
     private lazy var tableView :UITableView = {
@@ -48,6 +60,11 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
         return tabView
         
     }()
+    
+    @objc func clickSearch(){
+        let vc = SearchViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension RootViewController : UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {

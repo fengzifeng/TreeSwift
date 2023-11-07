@@ -208,4 +208,16 @@ public extension UIView {
             view.removeFromSuperview()
         }
     }
+    
+    func viewController() -> UIViewController? {
+        var next: UIResponder? = self.next
+        while (next != nil) {
+            if(next!.isKind(of: UIViewController.self)){
+                return next as? UIViewController
+            }
+            next = next!.next
+        }
+        
+        return nil;
+    }
 }
