@@ -12,11 +12,41 @@ import SwiftyJSON
 import KakaJSON
 import MJRefresh
 
-class HomeController: BaseViewController  {
+class HomeController: BaseViewController, CycleViewDelegate  {
+    func didSelectIndexCollectionViewCell(index: Int) {
+        
+    }
+    
     
     lazy var tableView = UITableView.init(frame: CGRect(x: 0, y: NavH, width: ScreenWidth, height: ScreenHeigth - NavH - BarH - TabDiff), style: UITableView.Style.plain)
     lazy var arrayData: [Convertible] = Array()
     var page = 0
+    
+    func createHeadView() {
+        Alamofire.request("https://www.wanandroid.com/banner/json") .responseJSON {response in
+            guard let dict =  response.result.value else {return}
+            guard let jsons =  JSON(dict)["data"].arrayObject else {return}
+//            let array  = modelArray(from: jsons, type: TreeModel.self)
+            var strArray: [String] = Array()
+            for item in jsons {
+                strArray.append((item as! Dictionary<String, Any>)["imagePath"] as! String)
+            }
+//            var array = jsons as NSArray
+//            array = array.value(forKeyPath: "imagePath") as! NSArray
+            if(strArray.count > 0) {
+                let cycle = CycleScrollView.init(frame: CGRectMake(0, 0, ScreenWidth, ScreenWidth/9.0*5))
+                cycle.delegate = self;
+                cycle.images = strArray
+                self.tableView.tableHeaderView = cycle
+            }
+//            self.arrayData.removeAll()
+//            self.arrayData.append(contentsOf: array)
+//            self.tableView.reloadData()
+            print(jsons)
+            
+        }
+        
+    }
     
     func requestData() {
         Alamofire.request("https://www.wanandroid.com/article/list/0/json") .responseJSON {response in
@@ -60,6 +90,7 @@ class HomeController: BaseViewController  {
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: requestMoreData)
         view.addSubview(tableView)
 //        tableView.did
+        createHeadView()
         requestData()
     }
     
