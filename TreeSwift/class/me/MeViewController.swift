@@ -112,6 +112,9 @@ extension MeViewController: UITableViewDelegate {
             tableView.tableHeaderView = createheadView()
             tableView.reloadData()
             UserDefaults.standard.removeObject(forKey: UserDefaultKey_LoginCookies)
+        } else if (title == "我的收藏") {
+            let vc = CollectViewController.init()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

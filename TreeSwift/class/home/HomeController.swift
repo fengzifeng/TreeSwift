@@ -49,6 +49,8 @@ class HomeController: BaseViewController, CycleViewDelegate  {
     }
     
     func requestData() {
+        createHeadView()
+
         Alamofire.request("https://www.wanandroid.com/article/list/0/json") .responseJSON {response in
             guard let dict =  response.result.value else {return}
             guard let jsons =  JSON(dict)["data"]["datas"].arrayObject else {return}
@@ -90,7 +92,6 @@ class HomeController: BaseViewController, CycleViewDelegate  {
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: requestMoreData)
         view.addSubview(tableView)
 //        tableView.did
-        createHeadView()
         requestData()
     }
     
