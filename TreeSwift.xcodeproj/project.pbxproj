@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F7636B62AFB406800D3FFBD /* tree_s1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7636B52AFB406800D3FFBD /* tree_s1.png */; };
+		9F7636B82AFB42AC00D3FFBD /* tree_s1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7636B72AFB42AC00D3FFBD /* tree_s1.png */; };
 		9F80AAE72AF88288009194CE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80AAE62AF88288009194CE /* SearchViewController.swift */; };
 		9F80AAE92AF88812009194CE /* HotSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80AAE82AF88812009194CE /* HotSearchCell.swift */; };
 		9F80AAEB2AF88829009194CE /* HistorySearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F80AAEA2AF88829009194CE /* HistorySearchCell.swift */; };
@@ -81,7 +81,7 @@
 
 /* Begin PBXFileReference section */
 		7CAAAF072CCE3A9D53020033 /* Pods_TreeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F7636B52AFB406800D3FFBD /* tree_s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree_s1.png; sourceTree = "<group>"; };
+		9F7636B72AFB42AC00D3FFBD /* tree_s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree_s1.png; sourceTree = "<group>"; };
 		9F80AAE62AF88288009194CE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9F80AAE82AF88812009194CE /* HotSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSearchCell.swift; sourceTree = "<group>"; };
 		9F80AAEA2AF88829009194CE /* HistorySearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySearchCell.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 		9F8B1C842AF799630025A26F /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				9F7636B52AFB406800D3FFBD /* tree_s1.png */,
+				9F7636B72AFB42AC00D3FFBD /* tree_s1.png */,
 				9F80AAFA2AFA22C8009194CE /* tree_s2.png */,
 				9F8B1C892AF79AD20025A26F /* tree_s3.png */,
 				9F80AAF62AFA2239009194CE /* tree_s5.png */,
@@ -443,7 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8B1C222AF756CE0025A26F /* LaunchScreen.storyboard in Resources */,
-				9F7636B62AFB406800D3FFBD /* tree_s1.png in Resources */,
+				9F7636B82AFB42AC00D3FFBD /* tree_s1.png in Resources */,
 				9F80AAF92AFA2239009194CE /* tree_s9.png in Resources */,
 				9F8B1C1F2AF756CE0025A26F /* Assets.xcassets in Resources */,
 				9F8B1C912AF79AD40025A26F /* tree_s3.png in Resources */,
