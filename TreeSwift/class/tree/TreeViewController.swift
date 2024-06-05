@@ -48,7 +48,6 @@ class TreeViewController: BaseViewController {
             self.tableView.reloadData()
             print(jsons)
             self.tableView.mj_header?.endRefreshing()
-            
         }
         
     }
