@@ -23,7 +23,6 @@ class ArticleCell: UITableViewCell {
         userImageView.layer.masksToBounds = true
         userImageView.layer.cornerRadius = 10
         userImageView.image = UIImage(named: "article_avatar")
-//        userImageView.backgroundColor = UIColor.blue
         return userImageView
     }()
     
