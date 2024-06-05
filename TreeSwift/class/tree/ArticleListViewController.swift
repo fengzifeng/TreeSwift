@@ -45,6 +45,7 @@ class ArticleListViewController: BaseViewController {
             self.arrayData.append(contentsOf: array)
             self.tableView.reloadData()
             self.page+=1
+            
             self.tableView.mj_footer?.endRefreshing()
         }
     }
@@ -62,7 +63,7 @@ class ArticleListViewController: BaseViewController {
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: requestMoreData)
         view.addSubview(tableView)
         requestData()
-        
+
     }
     
 }
