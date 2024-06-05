@@ -62,6 +62,7 @@ class ArticleListViewController: BaseViewController {
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: requestMoreData)
         view.addSubview(tableView)
         requestData()
+        
     }
     
 }
