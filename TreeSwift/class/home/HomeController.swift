@@ -43,7 +43,6 @@ class HomeController: BaseViewController, CycleViewDelegate  {
 //            self.arrayData.append(contentsOf: array)
 //            self.tableView.reloadData()
             print(jsons)
-            
         }
         
     }
