@@ -51,7 +51,6 @@ class CycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         cycleCollectionView!.showsVerticalScrollIndicator = false
         cycleCollectionView?.register(CycleCell.self, forCellWithReuseIdentifier: cellIdentifier)
         self.addSubview(cycleCollectionView!)
-        
         pageControl = UIPageControl.init(frame: CGRectMake(0, 0, frame.size.width / 2, 30))
         pageControl.center = CGPointMake(frame.size.width / 2, frame.size.height - 20);
         self.addSubview(pageControl);
