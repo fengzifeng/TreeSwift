@@ -56,7 +56,6 @@ class CycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         pageControl.center = CGPointMake(frame.size.width / 2, frame.size.height - 20);
         self.addSubview(pageControl);
         self.addTimer()
-        
     }
     func addTimer(){
         let timer1 = Timer.init(timeInterval: 1, target: self, selector: #selector(nextPageView), userInfo: nil, repeats: true)
