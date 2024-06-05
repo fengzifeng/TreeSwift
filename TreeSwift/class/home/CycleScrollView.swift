@@ -13,6 +13,7 @@ let sectionNum: Int = 100
 let cellIdentifier: String = "cellIdentifier"
 let width = ScreenWidth
 let height = ScreenWidth
+
 // 协议
 protocol CycleViewDelegate {
     func didSelectIndexCollectionViewCell(index: Int)->Void
@@ -54,13 +55,14 @@ class CycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         pageControl = UIPageControl.init(frame: CGRectMake(0, 0, frame.size.width / 2, 30))
         pageControl.center = CGPointMake(frame.size.width / 2, frame.size.height - 20);
         self.addSubview(pageControl);
-        
+
         self.addTimer()
     }
     func addTimer(){
         let timer1 = Timer.init(timeInterval: 1, target: self, selector: #selector(nextPageView), userInfo: nil, repeats: true)
         RunLoop.current.add(timer1, forMode: RunLoop.Mode.common)
         timer = timer1
+
     }
     
     func removeTimer(){
