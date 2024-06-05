@@ -60,7 +60,6 @@ extension TreeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = arrayData[indexPath.row]
-        
         return TreeCell.cellHeight(model: model as! TreeModel)
     }
     
