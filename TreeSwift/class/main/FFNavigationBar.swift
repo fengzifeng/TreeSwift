@@ -13,6 +13,8 @@ class FFNavigationBar: UINavigationBar {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+
+        
         if ShortSystemVersion >= CGFloat(11) {
             for view : UIView in self.subviews {
                 if NSStringFromClass(type(of: view)).contains("Background") {
