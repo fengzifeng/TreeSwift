@@ -16,6 +16,7 @@ extension UIViewController {
             vc.myNavigationItem.titleView = view
         } else {
             self.navigationItem.titleView = view
+            
         }
     }
 }
