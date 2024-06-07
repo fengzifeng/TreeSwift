@@ -32,6 +32,7 @@ extension RootNavigationController : UINavigationControllerDelegate, UIGestureRe
         func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if self.viewControllers.count == 1 {
             return false
+            
         }
         
         let topVC : BaseViewController = self.topViewController as! BaseViewController
