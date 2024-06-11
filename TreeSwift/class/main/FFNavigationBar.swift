@@ -12,7 +12,6 @@ class FFNavigationBar: UINavigationBar {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
 
         
         if ShortSystemVersion >= CGFloat(11) {
