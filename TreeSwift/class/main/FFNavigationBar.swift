@@ -21,7 +21,6 @@ class FFNavigationBar: UINavigationBar {
                 } else if NSStringFromClass(type(of: view)).contains("ContentView") {
                     var frame = view.frame
                     frame.origin.y = 20
-                    
                     if IsIphonex {
                         frame.origin.y = 44
                     }
