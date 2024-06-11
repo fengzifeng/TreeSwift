@@ -17,6 +17,7 @@ class HomeController: BaseViewController, CycleViewDelegate  {
         
     }
     
+    
     lazy var tableView = UITableView.init(frame: CGRect(x: 0, y: NavH, width: ScreenWidth, height: ScreenHeigth - NavH - BarH - TabDiff), style: UITableView.Style.plain)
     lazy var arrayData: [Convertible] = Array()
     var page = 0
