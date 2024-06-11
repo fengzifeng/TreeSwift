@@ -15,7 +15,7 @@ import MJRefresh
 class ArticleListViewController: BaseViewController {
     var cid: Int = 0
     var titleStr: String = ""
-//测试回退1
+
     lazy var tableView = UITableView.init(frame: CGRect(x: 0, y: NavH, width: ScreenWidth, height: ScreenHeigth - NavH), style: UITableView.Style.plain)
     lazy var arrayData: [Convertible] = Array()
     var page = 0
