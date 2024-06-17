@@ -26,7 +26,6 @@ let UserDefaultKey_HistorySearch = "HistorySearch"
 
 let Notification_LoginSuccess = "LoginSuccess"
 
-
 func SX(x : CGFloat) -> CGFloat {
     return x*ScaleX
 }

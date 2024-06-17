@@ -28,14 +28,14 @@ class TreeViewController: BaseViewController {
         tableView.mj_header?.beginRefreshing()
         view.backgroundColor = UIColor.white;
         view.addSubview(tableView)
-        //        tableView.did
+        //        测试1
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let parentVc : BaseViewController = self.parent as! BaseViewController
         parentVc.myTitle = "体系"
-        //测试回退3
+        //测试333
     }
     
     func requestData() {

@@ -16,8 +16,8 @@ import Kingfisher
 class ArticleCell: UITableViewCell {
     
     var currentModel :Article? = nil
-    
-    
+    //分开2
+
     lazy var userImageView: UIImageView = {
         let userImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         userImageView.layer.masksToBounds = true
