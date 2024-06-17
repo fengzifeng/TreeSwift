@@ -33,7 +33,7 @@ class ArticleListViewController: BaseViewController {
             let headerFields = response.response?.allHeaderFields as! [String : String]
             let userCookie =  headerFields["Set-Cookie"]
             print(jsons)
-
+//测试1
         }
     }
     
