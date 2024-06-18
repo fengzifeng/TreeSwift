@@ -14,8 +14,10 @@ import MJRefresh
 
 class TreeViewController: BaseViewController {
     
+    
     lazy var tableView = UITableView.init(frame: CGRect(x: 0, y: NavH, width: ScreenWidth, height: ScreenHeigth - NavH - BarH - TabDiff), style: UITableView.Style.plain)
     lazy var arrayData: [Convertible] = Array()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class TreeViewController: BaseViewController {
         view.backgroundColor = UIColor.white;
         view.addSubview(tableView)
         //        tableView.did
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
