@@ -35,7 +35,6 @@ class TreeViewController: BaseViewController {
         super.viewWillAppear(animated)
         let parentVc : BaseViewController = self.parent as! BaseViewController
         parentVc.myTitle = "体系"
-        
     }
     
     func requestData() {
