@@ -16,7 +16,6 @@ class UserInfo: Convertible {
     var repassword: String = ""
     var id: Int = 0
     var coinCount: Int = 0
-
     
     func kj_modelKey(from property: KakaJSON.Property) ->  KakaJSON.ModelPropertyKey {
         if (property.name == "name"){

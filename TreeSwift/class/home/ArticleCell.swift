@@ -17,7 +17,6 @@ class ArticleCell: UITableViewCell {
     
     var currentModel :Article? = nil
     
-    
     lazy var userImageView: UIImageView = {
         let userImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         userImageView.layer.masksToBounds = true
